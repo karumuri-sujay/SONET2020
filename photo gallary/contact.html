@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Bootstrap 4 - responsive Contact form</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <style>
+        body {
+            background-image: url(img/back.jpg);
+            background-size: cover;
+        }
+        
+        hr {
+            background: white;
+        }
+        
+        .contact-form {
+            background: rgba(0, 0, 0, .6);
+            color: white;
+            margin-top: 100px;
+            padding: 20px;
+            box-shadow: 0px 0px 10px 3px grey;
+        }
+    </style>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
+        <a class="navbar-brand" href="home.html"><i class="fa fa-picture-o" aria-hidden="true"></i> Photo Gallery</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item active">
+                    <a class="nav-link" href="home.html">Home <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="patang.html">Patang Utsav</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="orientation.html">Orientation Day</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="evening.html">Ngit Evening</a>
+                </li>
+            </ul>
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="contact.html"><i class="fa fa-address-card" aria-hidden="true"></i>
+                        Contact Us</a>
+                </li>
+                <li class="nav-item">
+                    <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
+                        Login <i class="fa fa-sign-in" aria-hidden="true"></i>
+                    </button>
+                </li>
+            </ul>
+        </div>
+    </nav>
+    <div class="container contact-form">
+        <h1>Contact form</h1>
+        <hr>
+        <div class="row">
+            <div class="col-md-6">
+                <address>Tauranga,New Zealand</address>
+                <p>Email:- sujaykarumuri@gmail.com</p>
+                <p>Phone:- +91 9242837408</p>
+            </div>
+            <div class="col-md-6">
+                <div class="form-group">
+                    <label>Name</label>
+                    <input type="text" class="form-control" id="name" placeholder="Enter Username">
+                </div>
+                <div class="form-group">
+                    <label>Email</label>
+                    <input type="text" class="form-control" id="email" placeholder="abc@gmail.com">
+                </div>
+                <div class="form-group">
+                    <label>Message</label>
+                    <textarea class="form-control" id="message" rows="5"></textarea>
+                </div>
+                <div class="form-group">
+                    <button class="btn btn-primary btn-block" onclick="showDetails();">Send</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script>
+        function showDetails() {
+            alert("Successfully submitted . Our team will respond as soon as possible");
+            var name = document.getElementById("name").value;
+            console.log("Entered Name is - " + name);
+            var email = document.getElementById("email").value;
+            console.log("Entered Email ID is - " + email);
+            var message = document.getElementById("message").value;
+            console.log("Message is - " + message);
+        }
+    </script>
+</body>
+
+</html>
