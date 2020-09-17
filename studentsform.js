@@ -47,7 +47,7 @@ function StudentDetails() {
     document.write("College");
     document.write("</th>");
     document.write("</thead>");
-    for (var i = 1; i < num + 1; i++) {
+    for (var i = 0; i < num; i++) {
         document.write("<tbody>");
         document.write("<td>");
         document.write(oname);
