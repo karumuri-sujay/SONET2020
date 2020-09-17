@@ -2,6 +2,8 @@ var num = prompt("How many student details will you enter");
 var span = document.getElementById("span").innerHTML = num;
 
 function StudentDetails() {
+    var sound=new Audio("done-for-you.mp3");
+    sound.play();
     var arr = new Array();
     var obj = new Object();
     var name = document.getElementById("name").value;
