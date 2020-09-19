@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Request for weather report</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <style>
+        select {
+            width: 30%;
+        }
+        
+        #header {
+            text-align: center;
+            color: white;
+            text-decoration: underline;
+        }
+        
+        body {
+            background-color: #ff7700;
+            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1600 900'%3E%3Cpolygon fill='%23cc0000' points='957 450 539 900 1396 900'/%3E%3Cpolygon fill='%23aa0000' points='957 450 872.9 900 1396 900'/%3E%3Cpolygon fill='%23d6002b' points='-60 900 398 662 816 900'/%3E%3Cpolygon fill='%23b10022' points='337 900 398 662 816 900'/%3E%3Cpolygon fill='%23d9004b' points='1203 546 1552 900 876 900'/%3E%3Cpolygon fill='%23b2003d' points='1203 546 1552 900 1162 900'/%3E%3Cpolygon fill='%23d3006c' points='641 695 886 900 367 900'/%3E%3Cpolygon fill='%23ac0057' points='587 900 641 695 886 900'/%3E%3Cpolygon fill='%23c4008c' points='1710 900 1401 632 1096 900'/%3E%3Cpolygon fill='%239e0071' points='1710 900 1401 632 1365 900'/%3E%3Cpolygon fill='%23aa00aa' points='1210 900 971 687 725 900'/%3E%3Cpolygon fill='%23880088' points='943 900 1210 900 971 687'/%3E%3C/svg%3E");
+            background-attachment: fixed;
+            background-size: cover;
+        }
+        
+        #sta {
+            color: yellow;
+        }
+        
+        #cont {
+            color: blue;
+        }
+        
+        #contries {
+            color: bisque;
+            text-decoration: underline;
+        }
+    </style>
+</head>
+
+<body>
+    <h1 id="header">Weather Report at present</h1>
+    <div class="row">
+        <div class="col-md-6">
+            <h3 id="contries">For States of Hyderabad</h3>
+            <div id="sta">
+                <h1 id="location"></h1>
+                <h3 id="long"></h3>
+                <h3 id="lati"></h3>
+                <h3 id="temp"></h3>
+                <h3 id="humidity"></h3>
+                <h3 id="desc"></h3>
+            </div>
+            <select name="states" id="states">
+                <option selected>Select</option>
+                <option>Andhra Pradesh</option>
+                <option>Arunachal Pradesh</option>
+                <option>Assam</option>
+                <option>Bihar</option>
+                <option>Chhattisgarh</option>
+                <option>Goa</option>
+                <option>Gujarat</option>
+                <option>Haryana</option>
+                <option>Himachal Pradesh</option>
+                <option>Jammu and Kashmir</option>
+                <option>Jharkhand</option>
+                <option>Karnataka</option>
+                <option>Kerala</option>
+                <option>Madhya Pradesh</option>
+                <option>Maharashtra</option>
+                <option>Manipur</option>
+                <option>Meghalaya</option>
+                <option>Mizoram</option>
+                <option>Nagaland</option>
+                <option>Odisha</option>
+                <option>Punjab</option>
+                <option>Rajasthan</option>
+                <option>Sikkim</option>
+                <option>Tamil Nadu</option>
+                <option>Tripura</option>
+                <option>Uttar Pradesh</option>
+                <option>Uttarkhand</option>
+                <option>West Bengal</option>
+                <option>Telangana</option>
+                <option>Chandigarh</option>
+                <option>Delhi</option>
+            </select>
+            <input type="button" value="Submit" class="btn btn-success" onclick="WRequest();">
+        </div>
+        <div class="col-md-6">
+            <h3 id="contries">For Countries</h3>
+            <div id="cont">
+                <h1 id="location1"></h1>
+                <h3 id="long1"></h3>
+                <h3 id="lati1"></h3>
+                <h3 id="temp1"></h3>
+                <h3 id="humidity1"></h3>
+                <h3 id="desc1"></h3>
+            </div>
+            <select name="states1" id="states1">
+                <option selected>Select</option>
+                <option>New Zealand</option>
+                <option>France</option>
+                <option>China</option>
+                <option>Spain</option>
+                <option>Italy</option>
+                <option>Turkey</option>
+                <option>Germany</option>
+                <option>Russia</option>
+                <option>Mexico</option>
+                <option>Austria</option>
+                <option>Ukraine</option>
+                <option>Malaysia</option>
+                <option>Thailand</option>
+                <option>Canada</option>
+            </select>
+            <input type="button" value="Submit" class="btn btn-primary" onclick="W1Request();">
+        </div>
+    </div>
+    <script src="request.js"></script>
+</body>
+
+</html>
