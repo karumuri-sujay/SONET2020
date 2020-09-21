@@ -37,7 +37,7 @@ function W1Request() {
     var description = document.getElementById("desc1");
 
     var select = document.getElementById("states1").value;
-    loc.innerHTML = "Selected State is " + select;
+    loc.innerHTML = "Selected Country is " + select;
     console.log(select);
     var request = new XMLHttpRequest();
     request.open('GET', `https://api.openweathermap.org/data/2.5/weather?q=${select}&appid=d05c1cf90a5133faa1ede98df3d1c5af`);
